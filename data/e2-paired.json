@@ -1,0 +1,367 @@
+{
+  "at": "2026-10-18T17:07:59.044Z",
+  "mode": "emu",
+  "n": 6,
+  "rows": [
+    {
+      "arm": "A",
+      "i": 0,
+      "mode": "emu",
+      "jobId": "cc450ca8-5743-418e-8a42-9411d57c5dcf",
+      "commit": "a0ae439c0b0ed6938bd6a296cfff2f51efe94ac36d80f2dbc1c9c6ec2c91c1b6",
+      "seed": "b20183fa81887d8328dc740db4d11533906ea66daf2a7ebe2f6be2caa7c430b2",
+      "perm": [
+        0,
+        1
+      ],
+      "fwd": {
+        "pickSlot": "A",
+        "pickOrig": 0,
+        "probs": {
+          "A": 0.87,
+          "B": 0.13
+        }
+      },
+      "bwd": {
+        "pickSlot": "A",
+        "pickOrig": 1,
+        "probs": {
+          "A": 0.87,
+          "B": 0.13
+        }
+      },
+      "agree": false,
+      "verdict": "UNDECIDED"
+    },
+    {
+      "arm": "A",
+      "i": 1,
+      "mode": "emu",
+      "jobId": "c0b3f252-f1ed-4a55-b643-0b43b2cb867f",
+      "commit": "7d75157746cc8d730e9a3073f45e48b78f84ebd07e21c97a0382858e9d6835a7",
+      "seed": "6f945b19356eafb2d921b2f81c53c9c807268dd0ed615f54070859f8531ee9cd",
+      "perm": [
+        1,
+        0
+      ],
+      "fwd": {
+        "pickSlot": "A",
+        "pickOrig": 1,
+        "probs": {
+          "A": 0.87,
+          "B": 0.13
+        }
+      },
+      "bwd": {
+        "pickSlot": "A",
+        "pickOrig": 0,
+        "probs": {
+          "A": 0.86,
+          "B": 0.14
+        }
+      },
+      "agree": false,
+      "verdict": "UNDECIDED"
+    },
+    {
+      "arm": "A",
+      "i": 2,
+      "mode": "emu",
+      "jobId": "d5434367-168a-4077-b6b2-5fb299bdc1c2",
+      "commit": "0bc1b5c2ad433c5463fc7f260f6a82b3e167268f957954d3ce8186fca6716f9d",
+      "seed": "8bbef8c0a3f002bd492f171d59b314974c3c6b58370aab0c94360b3e371903c8",
+      "perm": [
+        0,
+        1
+      ],
+      "fwd": {
+        "pickSlot": "A",
+        "pickOrig": 0,
+        "probs": {
+          "A": 0.86,
+          "B": 0.14
+        }
+      },
+      "bwd": {
+        "pickSlot": "A",
+        "pickOrig": 1,
+        "probs": {
+          "A": 0.86,
+          "B": 0.14
+        }
+      },
+      "agree": false,
+      "verdict": "UNDECIDED"
+    },
+    {
+      "arm": "A",
+      "i": 3,
+      "mode": "emu",
+      "jobId": "143d6e2b-e145-4554-af60-f444baeae392",
+      "commit": "32f38b94d9b6d00574386a0f8752d9f3d209dd832fd9d94e585eaa8727a8193d",
+      "seed": "73c2bec8fd5824acf33b00e90abb1d87d3f406e9cff58154b2acf28d68ff8258",
+      "perm": [
+        1,
+        0
+      ],
+      "fwd": {
+        "pickSlot": "A",
+        "pickOrig": 1,
+        "probs": {
+          "A": 0.88,
+          "B": 0.12
+        }
+      },
+      "bwd": {
+        "pickSlot": "A",
+        "pickOrig": 0,
+        "probs": {
+          "A": 0.88,
+          "B": 0.12
+        }
+      },
+      "agree": false,
+      "verdict": "UNDECIDED"
+    },
+    {
+      "arm": "A",
+      "i": 4,
+      "mode": "emu",
+      "jobId": "89f9441b-95e1-4ac5-a60f-f9aa3d3d89ee",
+      "commit": "a7402b4f6564d953b22d2dcd765a63ddbe8b2d395055cc05eeb4099ba471b805",
+      "seed": "1e7c93dfea43d8898219d814e9231d37c1ce17ab23623178d3c4e4d8baab9989",
+      "perm": [
+        1,
+        0
+      ],
+      "fwd": {
+        "pickSlot": "A",
+        "pickOrig": 1,
+        "probs": {
+          "A": 0.86,
+          "B": 0.14
+        }
+      },
+      "bwd": {
+        "pickSlot": "A",
+        "pickOrig": 0,
+        "probs": {
+          "A": 0.87,
+          "B": 0.13
+        }
+      },
+      "agree": false,
+      "verdict": "UNDECIDED"
+    },
+    {
+      "arm": "A",
+      "i": 5,
+      "mode": "emu",
+      "jobId": "cf6547fb-d962-4d7a-94ae-b82279564b5e",
+      "commit": "ce3b6ad87fe644d13d64ab2c7ec72287007a8ea35b073623d1b0961ad2981726",
+      "seed": "9723829778a0fc828efd3de3a1d8c9b278fa75fd7d61300e49f744ae255a3cae",
+      "perm": [
+        1,
+        0
+      ],
+      "fwd": {
+        "pickSlot": "A",
+        "pickOrig": 1,
+        "probs": {
+          "A": 0.87,
+          "B": 0.13
+        }
+      },
+      "bwd": {
+        "pickSlot": "A",
+        "pickOrig": 0,
+        "probs": {
+          "A": 0.87,
+          "B": 0.13
+        }
+      },
+      "agree": false,
+      "verdict": "UNDECIDED"
+    },
+    {
+      "arm": "B",
+      "i": 0,
+      "mode": "emu",
+      "jobId": "b9f94e88-1fee-4036-af8a-dcea10359b37",
+      "commit": "e9be85ea6e495693f789695a1b20ddc696f76044058a69d354d08e85af25061f",
+      "seed": "57ea9c416aca47e770c39920087aa8bdfd695329575c12fd18bdf023646c8ebc",
+      "perm": [
+        0,
+        1
+      ],
+      "fwd": {
+        "pickSlot": "B",
+        "pickOrig": 1,
+        "probs": {
+          "A": 0.34,
+          "B": 0.66
+        }
+      },
+      "bwd": {
+        "pickSlot": "A",
+        "pickOrig": 1,
+        "probs": {
+          "A": 0.78,
+          "B": 0.22
+        }
+      },
+      "agree": true,
+      "verdict": "B_TEXT (the brief reading)"
+    },
+    {
+      "arm": "B",
+      "i": 1,
+      "mode": "emu",
+      "jobId": "5cdc2447-bf92-4d6e-bc0e-38250bc8d3fd",
+      "commit": "9827a20cce2855667785e26921d3c4f213a7cc484667beb84eef84c1f9b486f1",
+      "seed": "2898afc93129daa0081cd6eb05854fd9a42c683fdac887d1db488083241eaffe",
+      "perm": [
+        0,
+        1
+      ],
+      "fwd": {
+        "pickSlot": "B",
+        "pickOrig": 1,
+        "probs": {
+          "A": 0.33,
+          "B": 0.67
+        }
+      },
+      "bwd": {
+        "pickSlot": "A",
+        "pickOrig": 1,
+        "probs": {
+          "A": 0.81,
+          "B": 0.19
+        }
+      },
+      "agree": true,
+      "verdict": "B_TEXT (the brief reading)"
+    },
+    {
+      "arm": "B",
+      "i": 2,
+      "mode": "emu",
+      "jobId": "24b58596-3e54-407d-aa28-cdfbc60ce831",
+      "commit": "1164401fc7247670162d5d788e73bf955afc7cc4efc99914024e6d6efdce51af",
+      "seed": "645756f7425c3128957f8f5462a20631bf419d5f7c51aea854838b6c2f417303",
+      "perm": [
+        1,
+        0
+      ],
+      "fwd": {
+        "pickSlot": "A",
+        "pickOrig": 1,
+        "probs": {
+          "A": 0.79,
+          "B": 0.21
+        }
+      },
+      "bwd": {
+        "pickSlot": "B",
+        "pickOrig": 1,
+        "probs": {
+          "A": 0.32,
+          "B": 0.68
+        }
+      },
+      "agree": true,
+      "verdict": "B_TEXT (the brief reading)"
+    },
+    {
+      "arm": "B",
+      "i": 3,
+      "mode": "emu",
+      "jobId": "6068e560-2d81-40fb-b8e4-c2c184e4e37e",
+      "commit": "db11a9e1cce2de45f66e1f8486b58a5c47ff0f0ccb07892a61114364f72e412e",
+      "seed": "520a29bf7eed19f47c3bf222bb25078508fd72b2d95848cf27e873c09eaa7e4e",
+      "perm": [
+        1,
+        0
+      ],
+      "fwd": {
+        "pickSlot": "A",
+        "pickOrig": 1,
+        "probs": {
+          "A": 0.79,
+          "B": 0.21
+        }
+      },
+      "bwd": {
+        "pickSlot": "B",
+        "pickOrig": 1,
+        "probs": {
+          "A": 0.28,
+          "B": 0.72
+        }
+      },
+      "agree": true,
+      "verdict": "B_TEXT (the brief reading)"
+    },
+    {
+      "arm": "B",
+      "i": 4,
+      "mode": "emu",
+      "jobId": "73de98c0-90dc-45fa-a96e-d62800913815",
+      "commit": "8dd2c0f88440c0bec5e46de9d641976d556f8655e2108da29d69f93b4953263c",
+      "seed": "18d33ca8c320051ce52624fdb83156c8059b576e72e56452a6851a0f0cad7ba0",
+      "perm": [
+        1,
+        0
+      ],
+      "fwd": {
+        "pickSlot": "A",
+        "pickOrig": 1,
+        "probs": {
+          "A": 0.78,
+          "B": 0.22
+        }
+      },
+      "bwd": {
+        "pickSlot": "B",
+        "pickOrig": 1,
+        "probs": {
+          "A": 0.31,
+          "B": 0.69
+        }
+      },
+      "agree": true,
+      "verdict": "B_TEXT (the brief reading)"
+    },
+    {
+      "arm": "B",
+      "i": 5,
+      "mode": "emu",
+      "jobId": "ab967850-588e-4f6e-97c3-cba5c7d7d697",
+      "commit": "c19339c73871e50804056cbfa2f923d6442c2ce865128458e4e5aa9f49479894",
+      "seed": "49ed48be606836aad838a25078cfc8274ab2df03d5c03c3bdb5a311e66e1cc6b",
+      "perm": [
+        0,
+        1
+      ],
+      "fwd": {
+        "pickSlot": "B",
+        "pickOrig": 1,
+        "probs": {
+          "A": 0.31,
+          "B": 0.69
+        }
+      },
+      "bwd": {
+        "pickSlot": "A",
+        "pickOrig": 1,
+        "probs": {
+          "A": 0.79,
+          "B": 0.21
+        }
+      },
+      "agree": true,
+      "verdict": "B_TEXT (the brief reading)"
+    }
+  ]
+}

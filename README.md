@@ -170,9 +170,33 @@ so the pair is committed together.
 - **disagree** → the answer was a position artefact. The question is
   **UNDECIDED**, and *a failure to decide is not a decision*.
 
-**ARM A (identical options) came out UNDECIDED every time** — which is
+**ARM A (identical options) came out UNDECIDED 6 times out of 6** — which is
 exactly right: two indistinguishable options have no answer, and the
 mechanism says so instead of inventing one.
+
+**ARM B (real content) came out AGREE 5 times out of 5** — and the agreed
+answer was the **brief's** reading, not the spec's.
+
+> **The judge is order-independent on this content** — 5/5 agreement across
+> both presentations means it is genuinely *reading*, not just following
+> position. **And it sides with the brief.**
+
+**Which is the first time this disagreement has been machine-checked.** The
+house's own answer is the spec's three-clause rule, and it is decided
+**mechanically** — by the fold suite's 13 discriminating cases, where every
+port agrees. The Elixir port implemented the *transitive* rule and
+**silently lost the child's effect**, which is how the disagreement
+surfaced in the first place.
+
+**Now both readings are on the record with receipts, and the mechanical one
+wins.** Which is the whole point: **the judge is a SECOND READER, never
+the decider.** Its job is to be order-independent and reproducible, and to
+**flag** when it disagrees with the mechanical answer — a disagreement that
+is information, not noise.
+
+**And note what the two arms together establish:** the gate says UNDECIDED
+exactly where there is nothing to decide, and DECIDED exactly where there
+is. **A verdict that can say "I do not know" is a verdict.**
 
 **This is the final shape of the design.** The entropy is not there to
 randomise the judge. It is there to make the *pair of presentations*

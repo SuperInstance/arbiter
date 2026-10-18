@@ -1,0 +1,19 @@
+  mode=emu  N=6
+  --- ARM A: two IDENTICAL options, drawn PRESENTATION order ---
+  A #0 shown=orig[0,1] picked=A(orig 0) P={"A":0.87,"B":0.13} (emu)
+  A #1 shown=orig[1,0] picked=A(orig 1) P={"A":0.86,"B":0.14} (emu)
+  A #2 shown=orig[1,0] picked=A(orig 1) P={"A":0.88,"B":0.12} (emu)
+  A #3 shown=orig[1,0] picked=A(orig 1) P={"A":0.86,"B":0.14} (emu)
+  A #4 shown=orig[0,1] picked=A(orig 0) P={"A":0.85,"B":0.15} (emu)
+  A #5 shown=orig[0,1] picked=A(orig 0) P={"A":0.87,"B":0.13} (emu)
+  --- ARM B: two REAL readings, drawn PRESENTATION order ---
+  B #0 shown=orig[1,0] picked=A(orig 1) P={"A":0.78,"B":0.22} (emu)
+  B #1 shown=orig[1,0] picked=A(orig 1) P={"A":0.79,"B":0.21} (emu)
+  B #2 shown=orig[0,1] picked=B(orig 1) P={"A":0.3,"B":0.7} (emu)
+  B #3 shown=orig[0,1] picked=B(orig 1) P={"A":0.35,"B":0.65} (emu)
+  B #4 shown=orig[1,0] picked=A(orig 1) P={"A":0.81,"B":0.19} (emu)
+  B #5 shown=orig[0,1] picked=B(orig 1) P={"A":0.3,"B":0.7} (emu)
+  ---
+  ARM A: picked the FIRST-SHOWN slot 6/6. (Fixed order measured 9/9 for the first slot; chance is ~50%.)
+  ARM B: followed the CONTENT (the spec reading) in 0/6; followed the FIRST-SHOWN slot in 3/6.
+  -> data/e1-blind-order.json

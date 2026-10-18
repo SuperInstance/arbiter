@@ -1,6 +1,223 @@
 {
-  "at": "2026-10-18T16:49:58.287Z",
+  "at": "2026-10-18T17:05:13.572Z",
   "mode": "emu",
-  "n": null,
-  "rows": []
+  "n": 6,
+  "rows": [
+    {
+      "arm": "A",
+      "i": 0,
+      "mode": "emu",
+      "jobId": "09b66913-4f3a-4bfb-9c97-7c11c5bb58b6",
+      "commit": "dc384aca7a4af55e8af6885608f79bb84e18b8af460ad1513b7fb5d404b35abd",
+      "seed": "f1344f327a47b50898e1c19c1dfc5d97c9f59cead30ecc7d90b3c69e2ed442cd",
+      "perm": [
+        0,
+        1
+      ],
+      "pickSlot": "A",
+      "pickOrig": 0,
+      "probs": {
+        "A": 0.87,
+        "B": 0.13
+      }
+    },
+    {
+      "arm": "A",
+      "i": 1,
+      "mode": "emu",
+      "jobId": "c8f996c5-959b-4412-a34e-0e741b9133df",
+      "commit": "41c8048d5997b21bf5c1c800597828df2bbc7d60676629de665888b67059ff07",
+      "seed": "59b92f805d26349481a53c3f6708e01947936f7f8ae9701854b567f4f290f04a",
+      "perm": [
+        1,
+        0
+      ],
+      "pickSlot": "A",
+      "pickOrig": 1,
+      "probs": {
+        "A": 0.86,
+        "B": 0.14
+      }
+    },
+    {
+      "arm": "A",
+      "i": 2,
+      "mode": "emu",
+      "jobId": "475a5e99-c3d0-405a-92f8-dff02e8acac7",
+      "commit": "dba451dff788b027fb26b7f99063fee9a653d776d477c301f7333f2447a913ed",
+      "seed": "2815e81d587e918db2fce5dfeedc184a966541e2d4fe39a162838f9c03509fb6",
+      "perm": [
+        1,
+        0
+      ],
+      "pickSlot": "A",
+      "pickOrig": 1,
+      "probs": {
+        "A": 0.88,
+        "B": 0.12
+      }
+    },
+    {
+      "arm": "A",
+      "i": 3,
+      "mode": "emu",
+      "jobId": "d4074349-32bd-42c2-8b12-5e242341bc9b",
+      "commit": "97171969f90753b8aef52818552ec78e9bdcbc6ac5e5eda161bce73c2834bab3",
+      "seed": "118c4848debec622afa4f327036ae1627e773d4674a69079f2b4a67bbdbd8182",
+      "perm": [
+        1,
+        0
+      ],
+      "pickSlot": "A",
+      "pickOrig": 1,
+      "probs": {
+        "A": 0.86,
+        "B": 0.14
+      }
+    },
+    {
+      "arm": "A",
+      "i": 4,
+      "mode": "emu",
+      "jobId": "92efb52a-33ba-4fe8-9190-6eab37514ed9",
+      "commit": "b9ab5bbe61f6679a2550acf5ffc40d32a40da99a1b8c5a28478bc6d2389c4bb8",
+      "seed": "12208f2e8271b7527e8d6b6f970983224008bde45e8893eeb93e8131a478abc4",
+      "perm": [
+        0,
+        1
+      ],
+      "pickSlot": "A",
+      "pickOrig": 0,
+      "probs": {
+        "A": 0.85,
+        "B": 0.15
+      }
+    },
+    {
+      "arm": "A",
+      "i": 5,
+      "mode": "emu",
+      "jobId": "e107bb33-ec02-4ffe-94a0-5e6a7ae5ddeb",
+      "commit": "e92c4c429061c27ed515bfc0a959cc39b004285e72feedf78b47891885f11749",
+      "seed": "cce850662447fb6f57b21758e20bc7e082ad007e9da626a8f88e5aa1bbd58cef",
+      "perm": [
+        0,
+        1
+      ],
+      "pickSlot": "A",
+      "pickOrig": 0,
+      "probs": {
+        "A": 0.87,
+        "B": 0.13
+      }
+    },
+    {
+      "arm": "B",
+      "i": 0,
+      "mode": "emu",
+      "jobId": "482e1b7e-b723-4f2e-9803-66c1a096505f",
+      "commit": "78b51f93c96df8d61d1e2d4265ee0d84fdb400ea4e6ad0c81aa81aa34b132353",
+      "seed": "96201e2bc0c4eb52ac7f3153d3b91ed59141f3b3a9ba128a0a718a415eae9cab",
+      "perm": [
+        1,
+        0
+      ],
+      "pickSlot": "A",
+      "pickOrig": 1,
+      "probs": {
+        "A": 0.78,
+        "B": 0.22
+      }
+    },
+    {
+      "arm": "B",
+      "i": 1,
+      "mode": "emu",
+      "jobId": "b5d6f627-011a-4b8a-b8ab-675b90c16926",
+      "commit": "bbb2e9d78415e59be70b8c0883b87d08fd8cc7ea39781a80192668f723cbc8cc",
+      "seed": "cd8e7d6209db6cb77a4b4b2a2fe44f7886fbc7f456fa0c447960bd30c6e6aebd",
+      "perm": [
+        1,
+        0
+      ],
+      "pickSlot": "A",
+      "pickOrig": 1,
+      "probs": {
+        "A": 0.79,
+        "B": 0.21
+      }
+    },
+    {
+      "arm": "B",
+      "i": 2,
+      "mode": "emu",
+      "jobId": "1de71640-a2a3-4939-866a-6e01209ebb6d",
+      "commit": "4687071be0bb67e52d246902da64db7b943f57c45b4bc4e1cc78f904d3d8fdeb",
+      "seed": "0d8ebff1965231dcd8a89b1568b8cdfda420a8367b8c2ba84523cdb3daf1cd76",
+      "perm": [
+        0,
+        1
+      ],
+      "pickSlot": "B",
+      "pickOrig": 1,
+      "probs": {
+        "A": 0.3,
+        "B": 0.7
+      }
+    },
+    {
+      "arm": "B",
+      "i": 3,
+      "mode": "emu",
+      "jobId": "dc4c5046-49d9-4b33-b72c-99885ea82bb3",
+      "commit": "f0bd7968f337f9303509740e9cf637cf23a8331e3f22815452351e38e4845d05",
+      "seed": "cffba6026f676b26bf6867414b7429a88936657748aa31e76a3c4710657d2136",
+      "perm": [
+        0,
+        1
+      ],
+      "pickSlot": "B",
+      "pickOrig": 1,
+      "probs": {
+        "A": 0.35,
+        "B": 0.65
+      }
+    },
+    {
+      "arm": "B",
+      "i": 4,
+      "mode": "emu",
+      "jobId": "0bca2a35-dcb9-4fa7-87cc-4412de58be32",
+      "commit": "ca1b53640a66100f45ba5f34a52e2dc44ce2c345634ce121b6a92276b02fb5c7",
+      "seed": "bee56a09e2865c48f4cfe618fadf6fcbc422997fdc15ba330808f62010719ca0",
+      "perm": [
+        1,
+        0
+      ],
+      "pickSlot": "A",
+      "pickOrig": 1,
+      "probs": {
+        "A": 0.81,
+        "B": 0.19
+      }
+    },
+    {
+      "arm": "B",
+      "i": 5,
+      "mode": "emu",
+      "jobId": "c0d0874e-ca2b-458a-8ce4-34a77338f23a",
+      "commit": "0113a6f5262451080d2accb33b8d42908455df657a6d0005d4a17977b5e3bf72",
+      "seed": "49fe9596667a7a9209c2e2c5d38831f0650cd6aa3b4c4817f37994a719df1ea2",
+      "perm": [
+        0,
+        1
+      ],
+      "pickSlot": "B",
+      "pickOrig": 1,
+      "probs": {
+        "A": 0.3,
+        "B": 0.7
+      }
+    }
+  ]
 }

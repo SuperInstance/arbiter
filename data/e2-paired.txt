@@ -1,0 +1,15 @@
+  A #0 fwd=orig0 bwd=orig1 -> DISAGREE -> UNDECIDED
+  A #1 fwd=orig1 bwd=orig0 -> DISAGREE -> UNDECIDED
+  A #2 fwd=orig0 bwd=orig1 -> DISAGREE -> UNDECIDED
+  A #3 fwd=orig1 bwd=orig0 -> DISAGREE -> UNDECIDED
+  A #4 fwd=orig1 bwd=orig0 -> DISAGREE -> UNDECIDED
+  A #5 fwd=orig1 bwd=orig0 -> DISAGREE -> UNDECIDED
+  B #0 fwd=orig1 bwd=orig1 -> AGREE: B_TEXT
+  B #1 fwd=orig1 bwd=orig1 -> AGREE: B_TEXT
+  B #2 fwd=orig1 bwd=orig1 -> AGREE: B_TEXT
+  B #3 fwd=orig1 bwd=orig1 -> AGREE: B_TEXT
+  B #4 fwd=orig1 bwd=orig1 -> AGREE: B_TEXT
+  B #5 fwd=orig1 bwd=orig1 -> AGREE: B_TEXT
+  ---
+  ARM A: decided 0/6; of those, the SPEC's reading won 0/0
+  ARM B: decided 6/6; of those, the SPEC's reading won 0/6
