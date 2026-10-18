@@ -153,9 +153,29 @@ Two arms, each decisive:
   spec's reading of the orphan rule and the brief's — in a drawn order.
   Does the pick follow the **content**, or the **slot**?
 
-**Result: the judge picked the FIRST-SHOWN option 5 times out of 5**, at
-P = 0.85–0.88, and the draw moved which option was first — so it moved
-the **answer** without changing the **rule**.
+**Result — recomputed from the committed data by `analyze-e1.py`, because
+the metric has to account for the permutation:**
+
+| arm | what it measures | result |
+|---|---|---|
+| **A** (two IDENTICAL options) | which **SLOT** was picked | **the FIRST-SHOWN slot, 6/6** |
+| **B** (two REAL readings) | which **CONTENT** was picked | **the CONTENT, 6/6** — always the brief's reading, whichever slot it sat in |
+
+**So the judge is position-bound when the content cannot distinguish the
+options, and content-bound when it can.** Both are 6/6.
+
+**A note on how easy it is to get this wrong.** ARM B's raw "picked slot A"
+count is **3/6**, which *looks* like a position bias. It is not: slot and
+content are confounded unless you account for the permutation — the brief's
+reading happened to sit in slot A in exactly three of the six draws. **An
+audit of this repo found the README claiming "5 times out of 5" when the
+committed data said something else; recomputing it properly turned up a
+STRONGER result than the one claimed.** `analyze-e1.py` now computes it
+from the committed rows, so the claim cannot drift from the data again.
+
+**And ARM A has to be in the experiment at all:** with only ARM B, a reader
+that simply favoured the brief's wording would look identical to a reader
+that understood the content.
 
 > **Randomising a bias is not removing it.** It turns the judge into a
 > coin flip, and a coin flip is worth nothing.
@@ -174,7 +194,7 @@ so the pair is committed together.
 exactly right: two indistinguishable options have no answer, and the
 mechanism says so instead of inventing one.
 
-**ARM B (real content) came out AGREE 5 times out of 5** — and the agreed
+**ARM B (real content) came out AGREE 6 times out of 6** — and the agreed
 answer was the **brief's** reading, not the spec's.
 
 > **The judge is order-independent on this content** — 5/5 agreement across

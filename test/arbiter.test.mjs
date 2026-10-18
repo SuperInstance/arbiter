@@ -7,6 +7,11 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { permutationFromSeed, seedFromBits } from '../src/entropy.mjs';
+// The agreement gate ITSELF, not a local re-implementation of it. The
+// previous version of this file re-implemented the gate inline and asserted
+// its own re-implementation -- and the suite stayed 6/6 green with the
+// real gate removed three different ways.
+import { agreement, VERDICT } from '../src/arbiter.mjs';
 
 test('a permutation is a pure function of the seed', () => {
   const a = permutationFromSeed('deadbeef', 3);
@@ -45,20 +50,42 @@ test('a draw too short to commit is refused', () => {
 });
 
 test('THE AGREEMENT GATE MUST BE ABLE TO SAY UNDECIDED', () => {
-  // The judge has a measured position bias: with identical options it
-  // picked the first-shown one 5 times out of 5. So for two options whose
-  // content is IDENTICAL, the two readings MUST disagree -- and the
-  // arbiter must return UNDECIDED, not a coin flip dressed as a verdict.
-  //
-  // This is the property that makes the whole design safe, so it is
-  // asserted directly rather than inferred.
-  const identical = { A: 'the same option', B: 'the same option' };
-  // A reader that always picks the first-shown option, asked in both
-  // orders, gives a DIFFERENT key each time.
-  const firstShown = (order) => order[0];
-  const fwd = firstShown(['A', 'B']);
-  const rev = firstShown(['B', 'A']);
-  assert.notEqual(fwd, rev, 'a position-biased reader disagrees with itself across orders');
-  // and that disagreement is the UNDECIDED case, not a verdict
-  assert.equal(fwd === rev ? 'DECIDED' : 'UNDECIDED', 'UNDECIDED');
+  // The gate is imported, not re-implemented. A position-biased reader
+  // disagrees with itself across the two presentations, so the gate must
+  // refuse to decide.
+  const fwd = { key: 'A', probabilities: { A: 0.9 } };
+  const rev = { key: 'B', probabilities: { B: 0.88 } };
+  const r = agreement(fwd, rev);
+  assert.equal(r.agree, false);
+  // The LITERAL, not the constant. Comparing against VERDICT.UNDECIDED
+  // would pass even if someone renamed the constant's VALUE -- which is
+  // exactly the third mutation the audit tried, and exactly what it
+  // missed. A test has to state the expected value from the SPEC.
+  assert.equal(r.verdict, 'UNDECIDED');
+  assert.equal(r.decided_key, null);
+});
+
+test('the agreement gate says DECIDED when both orders agree', () => {
+  const fwd = { key: 'A', probabilities: { A: 0.9 } };
+  const rev = { key: 'A', probabilities: { A: 0.91 } };
+  const r = agreement(fwd, rev);
+  assert.equal(r.agree, true);
+  assert.equal(r.verdict, 'DECIDED');
+  assert.equal(r.decided_key, 'A');
+});
+
+test('the agreement gate cannot be bypassed by requireAgreement=false being ignored', () => {
+  // With the escape hatch, the gate still reports the truth about agreement;
+  // it only changes the VERDICT. A caller that wants to force a decision
+  // should not be able to make a DISAGREEMENT look like agreement.
+  const fwd = { key: 'A' }, rev = { key: 'B' };
+  const r = agreement(fwd, rev, false);
+  assert.equal(r.agree, false, 'the escape hatch must not fake agreement');
+  assert.equal(r.verdict, 'DECIDED', 'it may still force a verdict');
+});
+
+test('the agreement gate handles a missing reading', () => {
+  const r = agreement({ key: 'A' }, null);
+  assert.equal(r.agree, false);
+  assert.equal(r.verdict, 'UNDECIDED');
 });
