@@ -38,6 +38,38 @@ import { jevSync } from './jev.mjs';
 export const VERDICT = Object.freeze({ DECIDED: 'DECIDED', UNDECIDED: 'UNDECIDED' });
 
 /**
+ * THE AGREEMENT GATE -- extracted as a PURE function so it can be tested.
+ *
+ * It was NOT a pure function before. The logic lived inline inside
+ * `adjudicate()`, and the test file re-implemented it locally:
+ *
+ *     const fwd = firstShown(['A', 'B']);
+ *     const rev = firstShown(['B', 'A']);
+ *     assert.equal(fwd === rev ? 'DECIDED' : 'UNDECIDED', 'UNDECIDED');
+ *
+ * ...which asserts the TEST'S OWN re-implementation, and never touches the
+ * code that actually runs. An audit removed the gate from the real
+ * implementation three ways -- hardcoded to always DECIDED, always
+ * UNDECIDED, and with UNDECIDED deleted from VERDICT -- and the suite was
+ * **6/6 green every time**. A test that cannot fail is not a test.
+ *
+ * @param {{key: string}} a   the reading from one presentation order
+ * @param {{key: string}} b   the reading from the other
+ * @param {boolean} requireAgreement
+ */
+export function agreement(a, b, requireAgreement = true) {
+  const agree = !!a && !!b && a.key === b.key;
+  if (!requireAgreement) {
+    return { agree, verdict: VERDICT.DECIDED, decided_key: a ? a.key : null };
+  }
+  return {
+    agree,
+    verdict: agree ? VERDICT.DECIDED : VERDICT.UNDECIDED,
+    decided_key: agree ? a.key : null,
+  };
+}
+
+/**
  * Adjudicate between options, blind.
  *
  * @param {object} o
@@ -83,8 +115,7 @@ export function adjudicate({
   const b = ask(reverse);
 
   // ── 3. AGREE? ────────────────────────────────────────────────────────
-  const agree = a.key === b.key;
-  const verdict = (agree || !requireAgreement) ? VERDICT.DECIDED : VERDICT.UNDECIDED;
+  const { agree, verdict, decided_key } = agreement(a, b, requireAgreement);
 
   // ── 4. COLLECT and RECORD ────────────────────────────────────────────
   return {
@@ -102,6 +133,6 @@ export function adjudicate({
     readings: { forward: a, reverse: b },
     agree,
     verdict,
-    decided_key: agree ? a.key : null,
+    decided_key,
   };
 }
