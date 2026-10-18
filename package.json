@@ -1,0 +1,19 @@
+{
+  "name": "arbiter",
+  "version": "0.1.0",
+  "description": "A blind adjudication: the entropy draws the order and commits to it BEFORE the judge is asked, so the judge's position bias cannot leak the answer.",
+  "type": "module",
+  "main": "./src/arbiter.mjs",
+  "exports": {
+    ".": "./src/arbiter.mjs",
+    "./moth": "./src/moth.mjs",
+    "./entropy": "./src/entropy.mjs",
+    "./witness": "./src/witness.mjs"
+  },
+  "bin": { "arbiter": "./bin/arbiter.mjs" },
+  "files": ["src", "bin", "data", "experiments", "README.md", "LICENSE"],
+  "scripts": { "test": "node test/all.mjs" },
+  "keywords": ["arbitration", "judge", "qrng", "moth-quantum", "position-bias", "witness", "quilt"],
+  "license": "MIT",
+  "private": false
+}
